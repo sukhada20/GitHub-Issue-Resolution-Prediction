@@ -1,0 +1,318 @@
+{
+  "dataset_size": 34665,
+  "num_repositories": 18,
+  "target_summary": {
+    "min_days": 0.13,
+    "median_days": 6.35,
+    "mean_days": 100.41,
+    "max_days": 2916.22,
+    "resolved_within_7d_rate": 0.5134
+  },
+  "regression_comparison": [
+    {
+      "Model": "Baseline Median",
+      "Val_MAE": 36.794,
+      "Val_RMSE": 80.375,
+      "Val_R2": -0.177,
+      "Val_MedAE": 6.986,
+      "Test_MAE": 18.498,
+      "Test_RMSE": 40.224,
+      "Test_R2": -0.0956,
+      "Test_MedAE": 6.564,
+      "Train_Time_s": 0.002
+    },
+    {
+      "Model": "Ridge Regression",
+      "Val_MAE": 36.895,
+      "Val_RMSE": 77.781,
+      "Val_R2": -0.1023,
+      "Val_MedAE": 12.359,
+      "Test_MAE": 19.453,
+      "Test_RMSE": 44.647,
+      "Test_R2": -0.3497,
+      "Test_MedAE": 7.187,
+      "Train_Time_s": 0.02
+    },
+    {
+      "Model": "Decision Tree",
+      "Val_MAE": 47.284,
+      "Val_RMSE": 86.809,
+      "Val_R2": -0.373,
+      "Val_MedAE": 15.732,
+      "Test_MAE": 22.561,
+      "Test_RMSE": 42.907,
+      "Test_R2": -0.2466,
+      "Test_MedAE": 8.879,
+      "Train_Time_s": 0.047
+    },
+    {
+      "Model": "Random Forest",
+      "Val_MAE": 36.606,
+      "Val_RMSE": 74.754,
+      "Val_R2": -0.0181,
+      "Val_MedAE": 13.11,
+      "Test_MAE": 19.818,
+      "Test_RMSE": 37.173,
+      "Test_R2": 0.0643,
+      "Test_MedAE": 9.163,
+      "Train_Time_s": 1.238
+    },
+    {
+      "Model": "XGBoost",
+      "Val_MAE": 40.333,
+      "Val_RMSE": 77.983,
+      "Val_R2": -0.108,
+      "Val_MedAE": 13.588,
+      "Test_MAE": 20.669,
+      "Test_RMSE": 38.166,
+      "Test_R2": 0.0137,
+      "Test_MedAE": 9.426,
+      "Train_Time_s": 0.691
+    }
+  ],
+  "classification_comparison": [
+    {
+      "Model": "Majority Baseline",
+      "Val_Accuracy": 0.4898,
+      "Val_Precision": 0.0,
+      "Val_Recall": 0.0,
+      "Val_F1": 0.0,
+      "Val_ROC_AUC": 0.4495,
+      "Test_Accuracy": 0.3852,
+      "Test_Precision": 0.0,
+      "Test_Recall": 0.0,
+      "Test_F1": 0.0,
+      "Test_ROC_AUC": 0.5628,
+      "Test_Confusion_Matrix": [
+        [
+          2003,
+          0
+        ],
+        [
+          3197,
+          0
+        ]
+      ],
+      "Train_Time_s": 0.001
+    },
+    {
+      "Model": "Logistic Regression",
+      "Val_Accuracy": 0.5825,
+      "Val_Precision": 0.5927,
+      "Val_Recall": 0.5809,
+      "Val_F1": 0.5867,
+      "Val_ROC_AUC": 0.5984,
+      "Test_Accuracy": 0.5971,
+      "Test_Precision": 0.6996,
+      "Test_Recall": 0.604,
+      "Test_F1": 0.6483,
+      "Test_ROC_AUC": 0.6395,
+      "Test_Confusion_Matrix": [
+        [
+          1174,
+          829
+        ],
+        [
+          1266,
+          1931
+        ]
+      ],
+      "Train_Time_s": 4.349
+    },
+    {
+      "Model": "Decision Tree",
+      "Val_Accuracy": 0.5712,
+      "Val_Precision": 0.5733,
+      "Val_Recall": 0.6238,
+      "Val_F1": 0.5975,
+      "Val_ROC_AUC": 0.6125,
+      "Test_Accuracy": 0.61,
+      "Test_Precision": 0.7179,
+      "Test_Recall": 0.6024,
+      "Test_F1": 0.6551,
+      "Test_ROC_AUC": 0.6392,
+      "Test_Confusion_Matrix": [
+        [
+          1246,
+          757
+        ],
+        [
+          1271,
+          1926
+        ]
+      ],
+      "Train_Time_s": 0.074
+    },
+    {
+      "Model": "Random Forest",
+      "Val_Accuracy": 0.6125,
+      "Val_Precision": 0.6232,
+      "Val_Recall": 0.6084,
+      "Val_F1": 0.6157,
+      "Val_ROC_AUC": 0.6526,
+      "Test_Accuracy": 0.6083,
+      "Test_Precision": 0.7445,
+      "Test_Recall": 0.5524,
+      "Test_F1": 0.6342,
+      "Test_ROC_AUC": 0.6745,
+      "Test_Confusion_Matrix": [
+        [
+          1397,
+          606
+        ],
+        [
+          1431,
+          1766
+        ]
+      ],
+      "Train_Time_s": 0.986
+    },
+    {
+      "Model": "XGBoost Classifier",
+      "Val_Accuracy": 0.6425,
+      "Val_Precision": 0.6833,
+      "Val_Recall": 0.5579,
+      "Val_F1": 0.6142,
+      "Val_ROC_AUC": 0.6943,
+      "Test_Accuracy": 0.6306,
+      "Test_Precision": 0.7508,
+      "Test_Recall": 0.5974,
+      "Test_F1": 0.6654,
+      "Test_ROC_AUC": 0.6899,
+      "Test_Confusion_Matrix": [
+        [
+          1369,
+          634
+        ],
+        [
+          1287,
+          1910
+        ]
+      ],
+      "Train_Time_s": 0.747
+    }
+  ],
+  "early_triage_ablation": {
+    "creation_only_test_mae": 20.669,
+    "t3h_augmented_test_mae": 19.804,
+    "t3h_augmented_test_rmse": 37.532,
+    "t3h_augmented_test_r2": 0.0462
+  },
+  "repo_heldout_generalization": {
+    "heldout_repos": [
+      "12_spring-cloud-gateway",
+      "2_lottie-android",
+      "8_thingsboard"
+    ],
+    "test_mae": 73.291,
+    "test_rmse": 191.908,
+    "test_r2": -0.0884,
+    "test_medae": 14.77
+  },
+  "uncertainty_calibration": {
+    "p10_residual": -39.791,
+    "p90_residual": 90.078
+  },
+  "top_features": [
+    {
+      "Feature": "author_core_member",
+      "Gain": 366.2337,
+      "Relative_%": 12.17
+    },
+    {
+      "Feature": "repo_subscribers",
+      "Gain": 302.1527,
+      "Relative_%": 10.04
+    },
+    {
+      "Feature": "repo_name_16_awesome-python",
+      "Gain": 251.9873,
+      "Relative_%": 8.37
+    },
+    {
+      "Feature": "repo_name_2_lottie-android",
+      "Gain": 178.2129,
+      "Relative_%": 5.92
+    },
+    {
+      "Feature": "issue_has_pr",
+      "Gain": 177.3168,
+      "Relative_%": 5.89
+    },
+    {
+      "Feature": "repo_name_18_models",
+      "Gain": 98.0448,
+      "Relative_%": 3.26
+    },
+    {
+      "Feature": "repo_name_13_public-apis",
+      "Gain": 75.1532,
+      "Relative_%": 2.5
+    },
+    {
+      "Feature": "repo_name_3_ghidra",
+      "Gain": 70.8638,
+      "Relative_%": 2.36
+    },
+    {
+      "Feature": "repo_has_org",
+      "Gain": 69.3168,
+      "Relative_%": 2.3
+    },
+    {
+      "Feature": "issue_text_similarity",
+      "Gain": 63.5788,
+      "Relative_%": 2.11
+    },
+    {
+      "Feature": "created_year",
+      "Gain": 61.8934,
+      "Relative_%": 2.06
+    },
+    {
+      "Feature": "repo_name_8_thingsboard",
+      "Gain": 57.2741,
+      "Relative_%": 1.9
+    },
+    {
+      "Feature": "author_newcomer",
+      "Gain": 53.7239,
+      "Relative_%": 1.79
+    },
+    {
+      "Feature": "author_num_issues_closed_inproject",
+      "Gain": 53.1201,
+      "Relative_%": 1.77
+    },
+    {
+      "Feature": "repo_open_issue_num",
+      "Gain": 51.2557,
+      "Relative_%": 1.7
+    },
+    {
+      "Feature": "repo_num_issues_created_inproject_closed",
+      "Gain": 47.9635,
+      "Relative_%": 1.59
+    },
+    {
+      "Feature": "author_comments_positive",
+      "Gain": 46.1955,
+      "Relative_%": 1.54
+    },
+    {
+      "Feature": "author_num_commits_inproject",
+      "Gain": 45.7641,
+      "Relative_%": 1.52
+    },
+    {
+      "Feature": "repo_name_9_dolphinscheduler",
+      "Gain": 43.7319,
+      "Relative_%": 1.45
+    },
+    {
+      "Feature": "author_comments_negative",
+      "Gain": 38.9703,
+      "Relative_%": 1.3
+    }
+  ]
+}
